@@ -1,6 +1,9 @@
 require "httparty"
+require 'dotenv'
+Dotenv.load
 
 #Starter Code:
+
 
 BASE_URL = "https://us1.locationiq.com/v1/search.php"
 KEY = ENV["LOCATIONIQ_TOKEN"]

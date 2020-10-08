@@ -42,7 +42,6 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"error":"Invalid Request"}'
-    http_version: 
   recorded_at: Tue, 19 Mar 2019 17:19:03 GMT
 - request:
     method: get
@@ -98,7 +97,6 @@ http_interactions:
         Colman Dock, West Edge, Belltown, Seattle, King County, Washington, 98104,
         USA","class":"amenity","type":"ferry_terminal","importance":0.111},{"place_id":"187000219","licence":"https:\/\/locationiq.com\/attribution","osm_type":"way","osm_id":"506986989","boundingbox":["51.0219139","51.0220732","4.549491","4.5496973"],"lat":"51.02199295","lon":"4.54959317732394","display_name":"Seattle,
         4C-4D, Dorp, Bonheiden, Mechelen, Antwerp, Flanders, 2820, Belgium","class":"building","type":"apartments","importance":0.111}]'
-    http_version: 
   recorded_at: Tue, 19 Mar 2019 17:19:03 GMT
 - request:
     method: get
@@ -155,6 +153,99 @@ http_interactions:
         19104, USA","class":"amenity","type":"restaurant","importance":0.111,"icon":"https:\/\/locationiq.org\/static\/images\/mapicons\/food_restaurant.p.20.png"},{"place_id":"12048900","licence":"https:\/\/locationiq.com\/attribution","osm_type":"node","osm_id":"1150696905","boundingbox":["50.9248789","50.9249789","6.9115744","6.9116744"],"lat":"50.9249289","lon":"6.9116244","display_name":"Beijing,
         62, Lindenthalg\u00fcrtel, Lindenthal, Cologne, Cologne Government Region,
         North Rhine-Westphalia, 50935, Germany","class":"amenity","type":"restaurant","importance":0.111,"icon":"https:\/\/locationiq.org\/static\/images\/mapicons\/food_restaurant.p.20.png"}]'
-    http_version: 
   recorded_at: Tue, 19 Mar 2019 17:24:23 GMT
-recorded_with: VCR 4.0.0
+- request:
+    method: get
+    uri: https://us1.locationiq.com/v1/search.php?format=json&key=&q=Seattle
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Date:
+      - Thu, 08 Oct 2020 03:53:51 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d38223c4408e6a7b9992bc76e568bc6081602129231; expires=Sat, 07-Nov-20
+        03:53:51 GMT; path=/; domain=.locationiq.com; HttpOnly; SameSite=Lax
+      X-Powered-By:
+      - LocationIQ
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 05a7f117260000ded91b8e7200000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5decead1dad3ded9-SEA
+    body:
+      encoding: UTF-8
+      string: '{"error":"Invalid key"}'
+  recorded_at: Thu, 08 Oct 2020 03:53:51 GMT
+- request:
+    method: get
+    uri: https://us1.locationiq.com/v1/search.php?format=json&key=&q=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Date:
+      - Thu, 08 Oct 2020 03:53:51 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d0b9d161d8a50963400acbc0fe185b1c11602129231; expires=Sat, 07-Nov-20
+        03:53:51 GMT; path=/; domain=.locationiq.com; HttpOnly; SameSite=Lax
+      X-Powered-By:
+      - LocationIQ
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 05a7f117e40000f559fe0c2200000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5decead30eb4f559-SEA
+    body:
+      encoding: UTF-8
+      string: '{"error":"Invalid key"}'
+  recorded_at: Thu, 08 Oct 2020 03:53:51 GMT
+recorded_with: VCR 6.0.0
